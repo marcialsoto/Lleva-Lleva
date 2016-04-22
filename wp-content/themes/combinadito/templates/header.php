@@ -8,7 +8,7 @@
   </div>
 </header>
 <header class="banner navbar navbar-default navbar-main navbar-static-top" role="banner">
-  <div class="container">
+  <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
         <span class="sr-only"><?= __('Toggle navigation', 'sage'); ?></span>
@@ -22,15 +22,9 @@
     <nav class="collapse navbar-collapse" role="navigation">
       <?php
       if (has_nav_menu('primary_navigation')) :
-        wp_nav_menu(['theme_location' => 'primary_navigation', 'walker' => new wp_bootstrap_navwalker(), 'menu_class' => 'nav navbar-nav']);
+        wp_nav_menu(['theme_location' => 'primary_navigation', 'walker' => new wp_bootstrap_navwalker(), 'menu_class' => 'nav navbar-nav navbar-right']);
       endif;
       ?>
-      <ul class="nav navbar-nav navbar-right">
-            <li><a href="/?random=1"><span class="glyphicon glyphicon-random" aria-hidden="true"></span></a></li>
-            <li><a class="cbSearchform" href="#"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a></li>
-            <li><a href="./">Ingresar</a></li>
-            <li><a href="./">Registrarse</a></li>
-          </ul>
     </nav>
   </div>
 </header>

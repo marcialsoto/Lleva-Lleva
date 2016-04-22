@@ -28,25 +28,46 @@
 
 	&.navbar-main{
 		&.navbar-default{
-			@include gradient-horizontal-three-colors($start-color: $yellow, $mid-color: $yellow, $color-stop: 50%, $end-color: $yellow--dark);
-			background-color: transparent;
+			background-color: $yellow;
 	    	border-color: transparent;
+	    	border-width: 0;
+	    	margin-bottom: 0;
 			.navbar-header{
 				.navbar-brand{
-					@include img-replace(143px, 50px);
-					background-image: url(../images/logo--sm.png)!important; 
+					@include img-replace(54px, 50px);
+					background-image: url(../images/logo--xs.png)!important; 
 					color: $blue--light; 
 					&:hover{
 							color: $white;
 					}
 				}
+				@media (min-width: $screen-sm-min){
+					.navbar-brand{
+						@include img-replace(204px, 140px);
+						background-image: url(../images/logo--lg.png)!important;
+					}	
+				}
 			}
-			.navbar-nav{
+			.menu-navegacion-principal-container{
+				@media (min-width: $screen-sm-min){
+					padding:45px 0;
+				}
+				.navbar-nav{
 				li{
 					a{
 						color: $black;
 						&:hover{
 							color: $purple; 
+						}
+						.visible-xs{
+							display: inline-block !important;
+							padding-left: 5px;
+						}
+
+						@media (min-width: $screen-sm-min){
+							.visible-xs{
+								display: none !important;
+							}
 						}
 					}
 						&.active{
@@ -80,6 +101,7 @@
 						}
 					}
 				}
+			}
 			}
 		}
 	}

@@ -35,7 +35,7 @@
           });
           
         //Home search form
-        $( ".cbSearchform" ).click(function(event) {
+        $( "#menu-item-55 a" ).click(function(event) {
           event.preventDefault();
           $('.navbar.navbar-searchform').toggleClass( "show hidden" );
           $('.navbar.navbar-searchform .search-field').focus();
