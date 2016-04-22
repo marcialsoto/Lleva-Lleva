@@ -1,0 +1,25 @@
+// Glyphicons font path
+$icon-font-path:        "../fonts/";
+
+// Grid settings
+$main-sm-columns:       12;
+$sidebar-sm-columns:    4;
+
+// Colors
+$white:					#FFFFFF;
+$blue: 					#7289FB;
+$purple:				#894AE8;
+$brand-info:            $purple !default; 
+$blue--dark: 			darken($blue, 15%);
+$blue--light: 			lighten($blue, 25%);
+$brand-primary:         $blue;
+$black:					#000000;
+$gray:					darken($black, 25%);
+$gray--light:			lighten($black, 75%);
+$gray--lighter:			lighten($black, 95%);
+$yellow:				#fcff00;
+$yellow--dark:			#FFEC01;
+
+$purple--dark:			#9829B3;
+$purple--darker:		#9C167D;
+$cyan: 					#54F4FA;

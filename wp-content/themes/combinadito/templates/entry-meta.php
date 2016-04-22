@@ -1,0 +1,1 @@
+<time class="updated" data-toggle="tooltip" data-placement="top" datetime="<?= get_post_time('c', true); ?>" title="<?= get_the_date(); ?>"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> <?= relative_post_the_date(); ?></time>

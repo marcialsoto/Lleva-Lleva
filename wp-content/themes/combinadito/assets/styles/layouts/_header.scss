@@ -1,0 +1,86 @@
+.navbar{
+	&.navbar-searchform{
+		background-color: $cyan;
+    	border-color: transparent;
+		margin-bottom: 0;
+		.container{
+			margin: 7px auto;
+    		text-align: center;
+    		.search-form{
+    			label{
+    				width: 100%;
+    				margin-bottom: 0;
+    				input{
+    					width: 100%;
+    					display: block;
+    					box-shadow: none;
+    					border-radius: 34px;
+    					border: 1px solid transparent;
+    					color: $blue--dark;
+    				}
+    			}
+    			input.search-submit{
+    				display: none;
+    			}
+    		}
+		}
+	}
+
+	&.navbar-main{
+		&.navbar-default{
+			@include gradient-horizontal-three-colors($start-color: $yellow, $mid-color: $yellow, $color-stop: 50%, $end-color: $yellow--dark);
+			background-color: transparent;
+	    	border-color: transparent;
+			.navbar-header{
+				.navbar-brand{
+					@include img-replace(143px, 50px);
+					background-image: url(../images/logo--sm.png)!important; 
+					color: $blue--light; 
+					&:hover{
+							color: $white;
+					}
+				}
+			}
+			.navbar-nav{
+				li{
+					a{
+						color: $black;
+						&:hover{
+							color: $purple; 
+						}
+					}
+						&.active{
+							a{
+								background-color: $yellow--dark;
+								color: $purple--dark;
+							}
+						}
+						&.dropdown{
+							.dropdown-menu{
+								li{
+									a{
+										color: $blue;
+										&:hover{
+											color: $blue--dark;
+										}
+									}
+									&.active{
+										a{
+											background-color: $cyan;
+											color: $white
+										}
+									}
+								}
+							}
+						&.open{
+							a.dropdown-toggle{
+								color: $white;
+								background-color: $purple--dark;
+							}	
+						}
+					}
+				}
+			}
+		}
+	}
+}
