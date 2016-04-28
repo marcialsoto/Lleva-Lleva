@@ -181,14 +181,17 @@ article{
             }
             .source{
                 @include make-row(0);
-                h4{
-                    @include mathlete(bulky);
-                }
-                ul.list-inline{
-                    li{
-                        a{
-                            position: relative;
-                            display: block;
+                .source__personas{
+                    @include make-sm-column(12);
+                    h4{
+                        @include mathlete(bulky);
+                    }
+                    ul.list-inline{
+                        li{
+                            a{
+                                position: relative;
+                                display: block;
+                            }
                         }
                     }
                 }

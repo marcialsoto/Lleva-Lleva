@@ -38,28 +38,30 @@
 				<a id="source-<?php echo get_the_ID(); ?>" type="button" class="cbSource"><i class="fa fa-sticky-note-o"></i> <span class="hidden-xs">Fuente</span></a>
 			</div>
 			<section class="hidden source" style="clear:both">
-				<?php
-					$posttags = get_the_tags();
-					if ($posttags) {
-					echo '<h4>Personajes en este post</h4>';
-					echo '<ul class="list-inline">';
-					  foreach($posttags as $tag) {
-					  	$term = get_term( $tag->term_id, 'post_tag' );
-					  	$persona__pic = get_field('persona__pic', $term);
-					  	$template_directory = get_template_directory_uri();
-					    echo '<li>';
-					    		echo '<a data-toggle="tooltip" data-placement="top" title="'.$tag->name.'" href="'.get_tag_link($tag->term_id).'">';
-					    		if($persona__pic){
-					    			echo '<img class="persona-thumb" src="'.$persona__pic.'" />'; 
-					    		}else{
-					    			echo '<img class="persona-thumb" src="'.$template_directory.'/dist/images/persona--no-pic.png" />';
-					    		}
-					    		echo '</a>';
-					    echo '</li>';
-					  }
-					 echo '</ul>';
-					}
-				?>
+				<div class="source__personas">
+					<?php
+						$posttags = get_the_tags();
+						if ($posttags) {
+						echo '<h4>Personajes en este post</h4>';
+						echo '<ul class="list-inline">';
+						  foreach($posttags as $tag) {
+						  	$term = get_term( $tag->term_id, 'post_tag' );
+						  	$persona__pic = get_field('persona__pic', $term);
+						  	$template_directory = get_template_directory_uri();
+						    echo '<li>';
+						    		echo '<a data-toggle="tooltip" data-placement="top" title="'.$tag->name.'" href="'.get_tag_link($tag->term_id).'">';
+						    		if($persona__pic){
+						    			echo '<img class="persona-thumb" src="'.$persona__pic.'" />'; 
+						    		}else{
+						    			echo '<img class="persona-thumb" src="'.$template_directory.'/dist/images/persona--no-pic.png" />';
+						    		}
+						    		echo '</a>';
+						    echo '</li>';
+						  }
+						 echo '</ul>';
+						}
+					?>
+				</div>
 			</section>
 		</div>
 	</footer>
