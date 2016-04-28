@@ -180,7 +180,7 @@ article{
                 padding-bottom: 15px;
             }
             .source{
-                @include make-lg-column(12);
+                @include make-row(0);
                 h4{
                     @include mathlete(bulky);
                 }
