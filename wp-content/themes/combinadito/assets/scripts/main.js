@@ -65,6 +65,16 @@
         
         $('body').tooltip({ selector: '[data-toggle=tooltip]' });
 
+        $('.sidebar').affix(
+          {
+            offset: {
+              top: 200,
+              bottom: function () {
+                return (this.bottom = $('.content-footer').outerHeight(true));
+            }
+          }
+        });
+
         console.log(templateUrl);
 
       },

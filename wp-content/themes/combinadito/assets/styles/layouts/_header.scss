@@ -33,6 +33,7 @@
 	    	border-width: 0;
 	    	margin-bottom: 0;
 			.navbar-header{
+				float: left;
 				.navbar-brand{
 					@include img-replace(54px, 50px);
 					background-image: url(../images/logo--xs.png)!important; 
@@ -43,65 +44,72 @@
 				}
 				@media (min-width: $screen-sm-min){
 					.navbar-brand{
-						@include img-replace(204px, 140px);
+						@include img-replace(204px, 120px);
 						background-image: url(../images/logo--lg.png)!important;
 					}	
 				}
 			}
 			.menu-navegacion-principal-container{
 				@media (min-width: $screen-sm-min){
-					padding:45px 0;
+					.navbar-nav{
+						padding: 30px 0;
+					}
+				
 				}
 				.navbar-nav{
-				li{
-					a{
-						color: $black;
-						&:hover{
-							color: $purple; 
-						}
-						.visible-xs{
-							display: inline-block !important;
-							padding-left: 5px;
-						}
-
-						@media (min-width: $screen-sm-min){
+					li{
+						a{
+							color: $black;
+							&:hover{
+								color: $purple; 
+							}
 							.visible-xs{
-								display: none !important;
+								display: inline-block !important;
+								padding-left: 5px;
+							}
+
+							@media (min-width: $screen-sm-min){
+								.visible-xs{
+									display: none !important;
+								}
 							}
 						}
-					}
-						&.active{
-							a{
-								background-color: $yellow--dark;
-								color: $purple--dark;
+							&.active{
+								a{
+									background-color: $yellow--dark;
+									color: $purple--dark;
+								}
 							}
-						}
-						&.dropdown{
-							.dropdown-menu{
-								li{
-									a{
-										color: $blue;
-										&:hover{
-											color: $blue--dark;
-										}
-									}
-									&.active{
+							&.dropdown{
+								.dropdown-menu{
+									li{
 										a{
-											background-color: $cyan;
-											color: $white
+											color: $blue;
+											&:hover{
+												color: $blue--dark;
+											}
+										}
+										&.active{
+											a{
+												background-color: $cyan;
+												color: $white
+											}
 										}
 									}
 								}
+							&.open{
+								a.dropdown-toggle{
+									color: $white;
+									background-color: $purple--dark;
+								}	
 							}
-						&.open{
-							a.dropdown-toggle{
-								color: $white;
-								background-color: $purple--dark;
-							}	
 						}
 					}
+					&.navbar-right {
+						 float: right!important;
+						 margin-right: -15px;
+					}
 				}
-			}
 			}
 		}
 	}

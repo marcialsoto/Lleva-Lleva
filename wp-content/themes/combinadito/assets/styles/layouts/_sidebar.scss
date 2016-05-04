@@ -1,0 +1,21 @@
+aside{
+	&.affix, &.affix-top{
+    	position: absolute;
+    }
+}
+
+@media (min-width: $screen-sm-min){
+    aside{
+        &.affix, &.affix-top{
+            position: fixed !important;
+            @include make-sm-column(2);
+            right: 10%;
+        }
+        &.affix{
+        	top: 0;
+        }
+        &.affix-top{
+    		top: 70%;
+    	}
+    }
+}
